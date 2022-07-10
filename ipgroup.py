@@ -4,8 +4,10 @@
 import httpx
 import os
 
-cookie = '03d909ce0e910249bdc6a40249480334'
-ipadd = '127.0.0.1'
+# ikuai cookie
+cookie = ''
+# ikuai ip
+ipadd = ''
 
 
 def findAllFile():

@@ -5,8 +5,13 @@
 import httpx
 import os
 
-cookie = '03d909ce0e910249bdc6a40249480334'
-ipadd = '127.0.0.1'
+# ikuai cookie
+cookie = ''
+# ikuai ip
+ipadd = ''
+
+# ikuai 分流指定外网口
+wan = ''
 
 
 def findAllFile():
@@ -43,7 +48,8 @@ def main(gfw, id):
 
     payload = "{\"func_name\":\"stream_domain\"," \
               "\"action\":\"add\"," \
-              "\"param\":{\"interface\":\"wan2\",\"src_addr\":\"\",\"domain\":" \
+              "\"param\":{\"interface\":\"" \
+              f"{wan}\",\"src_addr\":\"\",\"domain\":" \
               f"\"{gfw}\"" \
               ",\"comment\":" \
               f"\"gfw_list{id}\"" \
